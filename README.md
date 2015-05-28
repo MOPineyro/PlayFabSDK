@@ -25,8 +25,8 @@ require 'playfabsdk'
 
 PlayFabSDK.configure do |config|
   config.title_id = '0000'
-    config.developer_secret_key = '9999999999999333333322222223333333333333'
-  end
+  config.developer_secret_key = '9999999999999333333322222223333333333333'
+end
 
 result = PlayFabSDK.RegisterPlayFabUser('abutcher', 'abutcher@example.com', 'TestTest123(')
 ```

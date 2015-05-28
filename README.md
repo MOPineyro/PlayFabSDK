@@ -30,5 +30,9 @@ PlayFabSDK.configure do |config|
 
 result = PlayFabSDK.RegisterPlayFabUser('abutcher', 'abutcher@example.com', 'TestTest123(')
 
-# result.body = {"code":200,"status":"OK","data":{"PlayFabId":"10931252888739651331","SessionTicket":"4D2----8D11F4249A80000-7C64AB0A9F1D8D1A.CD803BF233CE76C","Username":"abutcher"}}
+# result.body = {"code":200,
+                 "status":"OK",
+		 "data":{"PlayFabId":"10931252888739651331",
+		 "SessionTicket":"4D2----8D11F4249A80000-7C64AB0A9F1D8D1A.CD803BF233CE76C",
+		 "Username":"abutcher"}}
 ```

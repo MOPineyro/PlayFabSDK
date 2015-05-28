@@ -10,4 +10,5 @@ Gem::Specification.new do |s|
                    "lib/playfabsdk/configuration.rb"]
   s.homepage    = 'http://rubygems.org/gems/hola'
   s.license     = 'Apache 2.0'
+  s.add_dependency('httparty')
 end

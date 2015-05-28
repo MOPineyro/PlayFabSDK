@@ -1,4 +1,4 @@
-# Playfabsdk
+# PlayFabSDK
 
 Playfab SDK for rails applications
 

@@ -1,8 +1,7 @@
-require 'json'
 require 'httparty'
 
 require 'playfabsdk/configuration'
-
+require 'playfabsdk/client/auth'
 
 module PlayFabSDK
   def self.configure(&block)
@@ -14,19 +13,13 @@ module PlayFabSDK
   end
 
   def self.post(uri, body, authtype, authvalue)
-    @result = HTTParty.post("https://#{@configuration.title_id}#{@configuration.production_environment_url}#{uri}",
-                            :body => body,
-                            :headers => { 'Content-Type' => 'application/json'} )
-  end
+    url = "https://#{@configuration.title_id}#{@configuration.production_environment_url}#{uri}"
+    headers = {'Content-Type' => 'application/json'}
 
-  def self.RegisterPlayFabUser(username, email, password)
-    @uri = '/Client/RegisterPlayFabUser'
-    @body = {'TitleId' => @configuration.title_id,
-             'Username' => username,
-             'Email' => email,
-             'Password' => password}.to_json
-    self.post(@uri, @body, nil, nil)
-  end
+    unless authtype.nil?
+      headers[authtype] = authvalue
+    end
 
-  private_class_method :configuration
+    result = HTTParty.post(url, :body => body, :headers => headers)
+  end
 end

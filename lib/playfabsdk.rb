@@ -1,6 +1,7 @@
 require 'httparty'
 
 require 'playfabsdk/configuration'
+require 'playfabsdk/client/account'
 require 'playfabsdk/client/auth'
 
 module PlayFabSDK
@@ -20,6 +21,6 @@ module PlayFabSDK
       headers[authtype] = authvalue
     end
 
-    result = HTTParty.post(url, :body => body, :headers => headers)
+    HTTParty.post(url, :body => body, :headers => headers)
   end
 end

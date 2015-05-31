@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Andrew Butcher"]
   s.email       = 'abutcher@afrolegs.com'
   s.files       = ["lib/playfabsdk.rb",
+                   "lib/playfabsdk/client/account.rb",
                    "lib/playfabsdk/client/auth.rb",
                    "lib/playfabsdk/configuration.rb"]
   s.homepage    = 'https://github.com/abutcher/PlayFabSDK'

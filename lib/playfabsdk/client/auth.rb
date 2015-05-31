@@ -9,7 +9,7 @@ module PlayFabSDK
                 'Username' => username,
                 'Email' => email,
                 'Password' => password}.to_json
-        PlayFabSFK.post(uri, body, nil, nil)
+        PlayFabSDK.post(uri, body, nil, nil)
       end
 
       def self.LoginWithPlayFab(username, password)

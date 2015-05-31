@@ -16,6 +16,8 @@ And then execute:
 
 ## Usage
 
+Register user
+
 ```ruby
 PlayFabSDK.configure do |config|
   config.title_id = 'EEEE'
@@ -34,6 +36,8 @@ response = PlayFabSDK::Client::Auth.RegisterPlayFabUser('abutcher', 'abutcher@ex
           "Username"=>"abutcher"}}
 
 ```
+
+Login
 
 ```ruby
 response = PlayFabSDK::Client::Auth.LoginWithPlayFab('abutcher', 'T3st(Te5t123PoTaT0')

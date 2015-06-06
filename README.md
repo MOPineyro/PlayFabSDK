@@ -16,14 +16,18 @@ And then execute:
 
 ## Usage
 
-Register user
+Configure
 
 ```ruby
 PlayFabSDK.configure do |config|
   config.title_id = 'EEEE'
   config.developer_secret_key = '9999999999999333333322222223333333333333'
 end
+```
 
+Register user
+
+```ruby
 response = PlayFabSDK::Client::Auth.RegisterPlayFabUser('abutcher',
                                                         'abutcher@example.com',
                                                         'T3st(Te5t123PoTaT0')
